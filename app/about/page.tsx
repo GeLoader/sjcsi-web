@@ -68,7 +68,7 @@ export default function AboutPage() {
           <img
             className="mx-auto mb-4 w-60 h-60 rounded-full shadow-lg"
             alt="School logo"
-            src="/sjcsi-logo.png"
+            src="./sjcsi-logo.png"
           />
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">

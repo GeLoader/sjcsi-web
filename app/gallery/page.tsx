@@ -142,7 +142,7 @@ export default function GalleryPage() {
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden rounded-t-lg">
                       <Image
-                        src={item.thumbnail || "/placeholder.svg"}
+                        src={item.thumbnail || "./placeholder.svg"}
                         alt={item.title}
                         width={400}
                         height={300}
@@ -191,7 +191,7 @@ export default function GalleryPage() {
                       </div>
                     ) : (
                       <Image
-                        src={item.thumbnail || "/placeholder.svg"}
+                        src={item.thumbnail || "./placeholder.svg"}
                         alt={item.title}
                         width={800}
                         height={600}

@@ -47,7 +47,7 @@ export default function CITPage() {
           <img
             className="mx-auto mb-2 w-40 h-40 rounded-full shadow-lg"
             alt="School logo"
-            src="/caste-logo.png"
+            src="./caste-logo.png"
           />
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">

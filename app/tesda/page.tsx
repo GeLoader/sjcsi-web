@@ -112,7 +112,7 @@ export default function TESDAPage() {
             </div>
             <div>
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="./placeholder.svg?height=400&width=600"
                 alt="TESDA Training Facility"
                 width={600}
                 height={400}

@@ -102,7 +102,7 @@ export default function LoginPage() {
           <img
             className="mx-auto mb-4 w-20 h-20 rounded-full shadow-lg"
             alt="School logo"
-            src="/sjcsi-logo.png"
+            src="./sjcsi-logo.png"
           />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">SJCSI Portal</h1>
