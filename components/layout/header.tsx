@@ -87,29 +87,43 @@ export function Header() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
-        <NavigationMenuTrigger className=" ">
-          Offices
-        </NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white text-[#094b3d]">
-            {offices.map((office) => (
-              <ListItem key={office.name} title={office.name} href={office.href} />
-            ))}
-          </ul>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
+           {/* Offices Dropdown */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="text-white hover:bg-white/20 px-3 py-2 rounded-md transition-colors bg-transparent hover:text-white data-[state=open]:bg-white/20">
+              OFFICES
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white text-[#094b3d] rounded-lg shadow-lg">
+                {offices.map((office) => (
+                  <ListItem 
+                    key={office.name} 
+                    title={office.name} 
+                    href={office.href}
+                    className="hover:bg-[#094b3d]/10 rounded-md transition-colors"
+                  />
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Departments</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {departments.map((department) => (
-                      <ListItem key={department.name} title={department.name} href={department.href} />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+          {/* Departments Dropdown */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="text-white hover:bg-white/20 px-3 py-2 rounded-md transition-colors bg-transparent hover:text-white data-[state=open]:bg-white/20">
+              DEPARTMENTS
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white text-[#094b3d] rounded-lg shadow-lg">
+                {departments.map((department) => (
+                  <ListItem 
+                    key={department.name} 
+                    title={department.name} 
+                    href={department.href}
+                    className="hover:bg-[#094b3d]/10 rounded-md transition-colors"
+                  />
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
@@ -117,7 +131,7 @@ export function Header() {
                     href="/academic"
                     className="text-white hover:bg-white/20 px-3 py-2 rounded-md transition-colors"
                     >
-                    Academic
+                    ACADEMIC
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -141,7 +155,7 @@ export function Header() {
             <Button variant="outline" size="sm" asChild className="hidden md:flex bg-transparent text-white">
               <Link href="/login">
                 <LogIn className="mr-2 h-4 w-4" />
-                Login
+                LOGIN
               </Link>
             </Button>
 
@@ -165,36 +179,36 @@ export function Header() {
                   </Link>
 
                   <div className="space-y-2">
-                    <h3 className="text-lg font-medium">Offices</h3>
-                    <div className="pl-4 space-y-2">
-                      {offices.map((office) => (
-                        <Link
-                          key={office.name}
-                          href={office.href}
-                          className="block text-sm text-muted-foreground hover:text-foreground"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {office.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+                <h3 className="text-lg font-medium px-3 py-2 hover:bg-white/20 rounded-md transition-colors">Offices</h3>
+                <div className="pl-4 space-y-2">
+                  {offices.map((office) => (
+                    <Link
+                      key={office.name}
+                      href={office.href}
+                      className="block text-sm px-3 py-2 hover:bg-white/20 rounded-md transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {office.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-medium">Departments</h3>
-                    <div className="pl-4 space-y-2">
-                      {departments.map((department) => (
-                        <Link
-                          key={department.name}
-                          href={department.href}
-                          className="block text-sm text-muted-foreground hover:text-foreground"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {department.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-medium px-3 py-2 hover:bg-white/20 rounded-md transition-colors">Departments</h3>
+                <div className="pl-4 space-y-2">
+                  {departments.map((department) => (
+                    <Link
+                      key={department.name}
+                      href={department.href}
+                      className="block text-sm px-3 py-2 hover:bg-white/20 rounded-md transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {department.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
                   <Link href="/academic" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
                     Academic
