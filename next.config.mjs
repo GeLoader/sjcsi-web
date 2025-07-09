@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV= 'production';
+
 const nextConfig = {
+  basePath: isProd ? '/sjcsi-web' : '',
   output: 'export',
   distDir: 'dist',
   eslint: {
