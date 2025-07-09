@@ -91,7 +91,7 @@ export default function HomePage() {
       <section
         className="relative text-white py-14"
         style={{
-          backgroundImage: `url('/cover-page.png')`,
+          backgroundImage: `url('./cover-page.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -122,7 +122,7 @@ export default function HomePage() {
       <section 
         className="relative text-white py-14 bg-[#094b3d]"
         style={{
-          backgroundImage: `url('/front-section2.png')`,
+          backgroundImage: `url('./front-section2.png')`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           height: '10vh'

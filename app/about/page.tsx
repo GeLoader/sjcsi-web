@@ -53,7 +53,7 @@ export default function AboutPage() {
       <section
         className="relative text-white py-14"
         style={{
-          backgroundImage: `url('/cover-page.png')`,
+          backgroundImage: `url('./cover-page.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
