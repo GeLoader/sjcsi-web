@@ -1,37 +1,51 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Users, BookOpen, Award, ChevronRight, Bell, ImageIcon } from "lucide-react"
+import { Calendar, Users, BookOpen, Award, ChevronRight, Bell, Image, ChevronLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
   const latestNews = [
     {
       id: 1,
-      title: "SJCSI Celebrates Academic Excellence Awards 2024",
-      excerpt: "Outstanding students recognized for their exceptional performance across all departments.",
+      title: "ANNOUNCEMENT",
+      excerpt: "The schedule for the Midterm examinations are as follows:\nFebruary 26, 2025 – MW Subjects\nFebruary 27, 2025 – TTh Subjects\nFebruary 28, 2025 – FS Subjects",
       date: "2024-01-15",
       category: "Academic",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      image: "./post6.png"
     },
     {
       id: 2,
-      title: "New TESDA Programs Now Available",
-      excerpt: "Expanded technical education offerings to meet industry demands.",
+      title: "With this year's theme",
+      excerpt: "Harnessing Scientific Innovation to Build a Resilient and Sustainable Future, may your dedication, skills, and passion for science lead you to success. Good luck, and may you shine on the national stage!",
       date: "2024-01-12",
       category: "TESDA",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      image: "./post2.png"
     },
     {
       id: 3,
-      title: "Campus Infrastructure Improvements Completed",
-      excerpt: "Modern facilities enhance learning environment for all students.",
+      title: "𝗣𝗮𝘀𝗶𝗱𝘂𝗻𝗴𝗼𝗴 𝗠𝗲𝗿𝗰𝗵",
+      excerpt: "𝗣𝗮𝘀𝗶𝗱𝘂𝗻𝗴𝗼𝗴 𝗠𝗲𝗿𝗰𝗵 is finally here!\nThe Campus Ministry proudly introduces the all-new batch of 𝗣𝗮𝘀𝗶𝗱𝘂𝗻𝗴𝗼𝗴 𝗠𝗲𝗿𝗰𝗵 to level up your Pasidungog experience this coming March 19, 2025.",
       date: "2024-01-10",
       category: "Campus",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      image: "./post3.png"
+    },
+    {
+      id: 4,
+      title: "𝗧𝗮𝗶𝘇𝗲 𝗣𝗿𝗮𝘆𝗲𝗿",
+      excerpt: "𝗧𝗮𝗶𝘇𝗲 𝗣𝗿𝗮𝘆𝗲𝗿: 𝗔 𝗗𝗮𝘁𝗲 𝘄𝗶𝘁𝗵 𝘁𝗵𝗲 𝗟𝗼𝗿𝗱 Hopeful hearts of SJCSI gathered together, drawn by love, to find solace in the silence, reflect on the Word of God, and gaze at the gentle glow of candles. …..",
+      date: "2024-01-10",
+      category: "Campus",
+      image: "./post4.png"
+    },
+    {
+      id: 5,
+      title: "ANNOUNCEMENT",
+      excerpt: "Classes are suspended starting at 5:30 p.m. today, February 19, 2025, and students are asked to observe MAGNUM SILENCIUM, or great silence, in reverence to the Taizé Prayer at the Gym. Thank you!",
+      date: "2024-01-10",
+      category: "Campus",
+      image: "./post5.png"
     },
   ];
 
@@ -85,6 +99,7 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, [latestNews.length]);
 
+ 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
